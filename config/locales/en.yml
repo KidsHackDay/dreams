@@ -7,16 +7,15 @@ en:
   html_direction: ltr
   reverse_direction: right
   lang_direction: left
-  browser_title_tag: Meta Dreams
-  main_sharing_description: Meta dreams is a place where we dream together and
-    breathe life into our mad creations. We share resources to make dreams happen.
-  top_headline_html: Meta<br>Dreams
+  browser_title_tag: Kids Hack Day
+  main_sharing_description: Kids Hack Day is a place where we co-create Kids Hack Day Events.
+  top_headline_html: Kids Hack Day
   top_headline_resources: Resources >
-  top_headline_dreams: Dreams
-  top_headline_old_dreams: 2015 Dreams
+  top_headline_dreams: Events
+  top_headline_old_dreams: 2015 Events
   top_headline_faq: FAQ
-  creations_menu: Dreams
-  register_creation_menu: Create A Dream
+  creations_menu: Events
+  register_creation_menu: Create An Event
   login_menu: Log in
   register_menu: Register
   private_area: Private area >
@@ -24,25 +23,21 @@ en:
   logout_menu: Log out
   public: Public
   private: Private
-  humans_credit_html: The dreams platform started at Borderland, from there it reached
-    the Middle east to Midburnerot, Midburn and is now part of Metaburn<br>Here are the humans who made
-    the dreams platform possible (Refresh the page, Swipe to shuffle, Or use the arrow
+  humans_credit_html: Once upon a time, forest creatures created Kids Hack Day. (Refresh the page, Swipe to shuffle, Or use the arrow
     keys)
-  welcome_guest_title: Welcome to our Dreams
+  welcome_guest_title: Welcome to our Events
   welcome_guest_text_html: Congratulations! You've stumbled upon something special!
-    <b>Metaburn</b> is some awesome fucking shit. We dream together and breathe life
-    into our mad and wondrous creations. Dreams need matter to come to life, and this
+    <b>Kid's Hack Day</b> is some awesome fucking shit. We dream together and breathe life
+    into our mad and wondrous creations. Events need matter to come to life, and this
     is where we share resources to make that happen.
-  welcome_user_title: Welcome to your Dreams!
-  welcome_user_text_html: Metaburn Dreams is a directory of our collective imagination.
+  welcome_user_title: Welcome to your Events!
+  welcome_user_text_html: Kids Hack Day Events is a directory of our collective imagination.
     We dream together and breathe life into our mad and wondrous creations. Dreams
     need matter to come to life, and this is where we share resources to make that
-    happen. Have a look around or create a dream of your own!
+    happen. Have a look around or create an event of your own!
   header_faq_link: Did you already read our FAQ page?
-  footer_left_html: Metaburn is a participatory community where we co-create events
-    and gatherings as prototypes of our dreams. It is an empty container, open to
-    your initiative. It is an invitation to play, to reflect, and to engage.
-  footer_right_html: Metaburn
+  footer_left_html: Kids Hack Day is a participatory community. It is an invitation to play, to reflect, and to engage.
+  footer_right_html: Kids Hack Day
   footer_html: This platform was originally written by Borderlings and Midburners. Dreams is
     <a href='https://github.com/metaburn/dreams'>open
     source</a> and served with <span>❤</span> by the <a href='/pages/humans'>Humans
@@ -53,16 +48,16 @@ en:
   hide_minimum_funded: Hide minimum funded
   hide_not_open_for_granting: Hide not open for funding
   sort_by: Sort by
-  form_basics_headline: Dream registration
+  form_basics_headline: Event registration
   form_summary: Summary
-  form_dream_name: Dream name
-  form_dream_name_en_label: Dream name in English (required)
-  form_dream_name_label: Dream name (required) 
-  form_dream_name_guidetext_html: What's your dream prototype called?
-  form_subtitle_en_label: Summarize your dream in English (required)
-  form_subtitle_label: Summarize your dream (required)
-  form_subtitle_guidetext_html: Brief summary of the dream prototype you are applying
-    for the front page of the dream's site. Keep it short, up to 256 characters.
+  form_dream_name: Event name
+  form_dream_name_en_label: Event name in English (required)
+  form_dream_name_label: Event name (required)
+  form_dream_name_guidetext_html: What's your Event called?
+  form_subtitle_en_label: Summarize your event in English (required)
+  form_subtitle_label: Summarize your event (required)
+  form_subtitle_guidetext_html: Brief summary of the event prototype you are applying
+    for the front page of the event's site. Keep it short, up to 256 characters.
   form_creator_name_label: Group / Artist name
   form_creator_name_guidetext_html: ''
   create_dream_loading_text: Making room for your dream in our magical cloud...
@@ -77,7 +72,7 @@ en:
   form_about_the_artist_label: About the group/Artist
   form_dream_website_label: Web Site / Facebook page
   form_dream_website_short: The dream website
-  
+
   form_dream_point_of_contact_email: Your contact person from Art Department
   dream_safety_file_comments_nop_message: Hurray! Nothing for you to update right now...
   dream_safety_file_comments_update: Update Comments
@@ -387,7 +382,7 @@ en:
   coins_left: 'Available Hearts:'
   currency: NIS
   how_can_i_help_title: How can I help?
-  how_can_i_help_title_desc_html: In this page you will find all our dreamers current needs. Find a dream you'd like to join, and click 
+  how_can_i_help_title_desc_html: In this page you will find all our dreamers current needs. Find a dream you'd like to join, and click
   how_can_i_help_page_description: In this page you will find all our dreamers current needs. Find a dream you'd like to join, and click add my name"
   created_new_dream: Yeah! You've created a dream. You can add info to your dream
     now or save and continue adding info in the future
