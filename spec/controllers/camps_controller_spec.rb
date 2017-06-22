@@ -67,10 +67,10 @@ describe CampsController do
     end
 
     context 'logged in' do
-      let(:guide) { false }
+      let(:organizer) { false }
       let(:admin) { false }
       let(:current_user) {
-        User.create!(email: 'mr@robot.me', password: 'badpassword', guide: guide, admin: admin)
+        User.create!(email: 'mr@robot.me', password: 'badpassword', organizer: organizer, admin: admin)
       }
 
       before :each do
@@ -86,8 +86,8 @@ describe CampsController do
         it_behaves_like 'should succeed'
       end
 
-      context 'guide' do
-        let(:guide) { true }
+      context 'organizer' do
+        let(:organizer) { true }
         it_behaves_like 'should succeed'
       end
 

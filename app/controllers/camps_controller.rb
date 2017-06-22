@@ -2,7 +2,7 @@ class CampsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :index]
   before_action :load_camp!, except: [:index, :new, :create]
   before_action :enforce_delete_permission!, only: [:destroy, :archive]
-  before_action :enforce_guide!, only: %i(tag)
+  before_action :enforce_organizer!, only: %i(tag)
   before_action :load_lang_detector, only: %i(show index)
 
   def index
@@ -10,7 +10,7 @@ class CampsController < ApplicationController
     filter[:active] = true
     filter[:not_hidden] = true
 
-    if (!current_user.nil? && (current_user.admin? || current_user.guide?))
+    if (!current_user.nil? && (current_user.admin? || current_user.organizer?))
       filter[:hidden] = true
       filter[:not_hidden] = false
     end
@@ -87,25 +87,25 @@ class CampsController < ApplicationController
       current_user.grants -= granted
 
       # Increase camp grants.
-      @camp.grants.new({:user_id => current_user.id, :amount => granted})      
+      @camp.grants.new({:user_id => current_user.id, :amount => granted})
 
       if @camp.grants_received + granted >= @camp.minbudget
         @camp.minfunded = true
       else
         @camp.minfunded = false
       end
-      
+
       if @camp.grants_received + granted >= @camp.maxbudget
         @camp.fullyfunded = true
       else
         @camp.fullyfunded = false
       end
-        
+
       unless current_user.save
         flash[:notice] = "#{t:errors_str}: #{current_user.errors.full_messages.uniq.join(', ')}"
         redirect_to camp_path(@camp) and return
       end
-      
+
       unless @camp.save
         flash[:notice] = "#{t:errors_str}: #{@camp.errors.full_messages.uniq.join(', ')}"
         redirect_to camp_path(@camp) and return
@@ -117,7 +117,7 @@ class CampsController < ApplicationController
   end
 
   def update
-    if (@camp.creator != current_user) and !current_user.admin and !current_user.guide
+    if (@camp.creator != current_user) and !current_user.admin and !current_user.organizer
       flash[:alert] = "#{t:security_cant_edit_dreams_you_dont_own}"
       redirect_to camp_path(@camp) and return
     end
@@ -202,8 +202,8 @@ class CampsController < ApplicationController
     end
   end
 
-  def enforce_guide!
-    if (!current_user.admin) && (!current_user.guide)
+  def enforce_organizer!
+    if (!current_user.admin) && (!current_user.organizer)
       flash[:alert] = "#{t:security_cant_tag_dreams_you_dont_own}"
       redirect_to camp_path(@camp)
     end
@@ -235,4 +235,3 @@ class CampsController < ApplicationController
     @detector = StringDirection::Detector.new(:dominant)
   end
 end
-
