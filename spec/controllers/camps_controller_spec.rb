@@ -69,6 +69,7 @@ describe CampsController do
     context 'logged in' do
       let(:organizer) { false }
       let(:admin) { false }
+      let(:sponsor) { false }
       let(:current_user) {
         User.create!(email: 'mr@robot.me', password: 'badpassword', organizer: organizer, admin: admin)
       }
@@ -95,6 +96,12 @@ describe CampsController do
         let(:admin) { true }
         it_behaves_like 'should succeed'
       end
+
+      context 'sponsor' do
+        let(:sponsor) { true }
+        it_behaves_like 'should succeed'
+      end
+
     end
   end
 end
