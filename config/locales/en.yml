@@ -57,7 +57,7 @@ en:
   form_subtitle_en_label: Summarize your event in English (required)
   form_subtitle_label: Summarize your event (required)
   form_subtitle_guidetext_html: Brief summary of the event. Keep it short, up to 256 characters.
-  form_creator_name_label: Group / Artist name
+  form_creator_name_label: Name of contact person
   form_creator_name_guidetext_html: ''
   create_dream_loading_text: Making room for your dream in our magical cloud...
   create_dream_loading_text2: This usually takes ~8 seconds. Take a mindful breath as we integrate with the drive for you...
