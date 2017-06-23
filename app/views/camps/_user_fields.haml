@@ -1,0 +1,13 @@
+.nested-fields.panel.panel-default.col-md-7{ style: 'float:' + I18n.t('lang_direction')}
+  .panel-body
+    = f.label :email
+    - if (@can_edit)
+      = f.text_field :email, class: 'form-control'
+    - else
+      = f.text_field :email, class: 'form-control', readonly: true
+    = f.label :organizer
+    = f.check_box :organizer, class: "checkbox"
+    %br
+    = f.label :sponsor
+    = f.check_box :sponsor, class: "checkbox"
+    %br
