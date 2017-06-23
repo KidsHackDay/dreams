@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170622141346) do
+ActiveRecord::Schema.define(version: 20170622143946) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     :index=>{:name=>"index_active_admin_comments_on_namespace"}
@@ -243,6 +243,7 @@ ActiveRecord::Schema.define(version: 20170622141346) do
     t.boolean  "admin",                  :default=>false
     t.integer  "grants",                 :default=>0
     t.boolean  "organizer"
+    t.boolean  "sponsor"
   end
 
   create_table "versions", force: :cascade do |t|

@@ -86,7 +86,7 @@ en:
   edit_person: Edit details
   remove_responsibility: Remove responsibility
   remove_person: Remove person
-  form_project_manager: Project manager
+  form_project_manager: Event Creator
   project_roles:
     manager: Project manager
     vp: Project vice manager

@@ -17,9 +17,9 @@
 
   });
 
-- if !Rails.configuration.x.firestarter_settings["disable_edit_safetybag"] or (current_user && (current_user.guide || current_user.admin))
+- if !Rails.configuration.x.firestarter_settings["disable_edit_safetybag"] or (current_user && (current_user.organizer || current_user.admin || current_user.sponsor))
   :javascript
-    $(function() { $(".hide_show_safetyfile").click(function(){ 
+    $(function() { $(".hide_show_safetyfile").click(function(){
     if($('.safetybar-info').css('display') === "none") {
       $('.safetybar-info').fadeIn();
       }else {
@@ -28,7 +28,7 @@
     })});
 - else
   :javascript
-    $(function() { $(".hide_show_safetyfile").click(function(){ 
+    $(function() { $(".hide_show_safetyfile").click(function(){
       alert( "Safety file is currrently disabled" );
     })});
 
@@ -87,7 +87,7 @@
 
   .combo#visability
     = form.label t("form_dream_visability")
-    
+
     = form.radio_button :is_public, true
     = form.label t("form_dream_visability_yes")
     = form.radio_button :is_public, false
@@ -111,7 +111,7 @@
 
   .combo
     = form.label t("form_dream_website_label")
-    %blockquote  
+    %blockquote
       = best_in_place_if @can_edit, @camp, :website, html_attrs: {maxlength: 512, class: "form-control"}, display_with: :simple_format, place_holder: t(:form_click_to_edit_html)
 
   .combo#description
@@ -207,7 +207,7 @@
     = form.label t("form_project_management_crew")
     %span.label.label-success
       =t("private")
-  
+
   - if Rails.configuration.x.firestarter_settings["crew_size"]
     .row
       .combo.col-xs-7{ style: 'float:' + I18n.t('lang_direction')}
@@ -215,17 +215,18 @@
         %blockquote
           = best_in_place_if @can_edit, @camp, :safetybag_crewsize, html_attrs: {maxlength: 5, class: "form-control"}, place_holder: t(:form_click_to_edit_html)
         %br
-  
+
   #responsibles
     = form.fields_for :people do |person|
       = render 'person_fields', :f => person, :camp_id => @camp.id
-  
-  - if @can_edit
-    .row
-      .links.col-xs-12
-        = link_to_add_association t('add_a_new_person'), form, :people, render_options: { locals: { camp_id: @camp.id } }, class: 'btn btn-success', id: 'add-new-person'
-        %br
-        %br
+
+-# Hide this for now
+-#  - if @can_edit
+-#    .row
+-#      .links.col-xs-12
+-#        = link_to_add_association t('add_a_new_person'), form, :user, render_options: { locals: { camp_id: @camp.id } }, class: 'btn btn-success', id: 'add-creator'
+-#        %br
+-#        %br
 
   - if Rails.configuration.x.firestarter_settings["safetybag"]
     .combo
@@ -244,7 +245,7 @@
       = best_in_place_if @can_edit, @camp, :safetybag_secondMemberName, html_attrs: {maxlength: 64, class: "form-control"}, place_holder: t(:form_click_to_edit_html)
 
   - if Rails.configuration.x.firestarter_settings["safetybag"]
-    
+
     .header-heading.safetybag-header
       = t("form_safetybag_headline")
 
@@ -336,7 +337,7 @@
   .combo#artgrants
   - if Rails.configuration.x.firestarter_settings["granting"]
     = t("form_artgrants_text_html")
-    
+
   - if Rails.configuration.x.firestarter_settings["granting"] and !Rails.application.config.x.firestarter_settings['disable_edit_budget']
     .combo#minbudget_realcurrency
       = form.label t("form_minigrants_realcurrency_label")
@@ -352,4 +353,3 @@
       = t("form_maxigrants_realcurrency_guidetext_html")
     %blockquote
       = best_in_place_if @can_edit, @camp, :maxbudget_realcurrency, html_attrs: {maxlength: 6, class: "form-control"}, place_holder: t(:form_click_to_edit_html), display_with: :number_to_currency, :helper_options => {:unit => "", precision:0}
-      

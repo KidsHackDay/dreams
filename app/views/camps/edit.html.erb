@@ -2,11 +2,11 @@
 <% if (current_user && (current_user == @camp.creator)) %>
   <% @can_edit = true %>
 <% end %>
-<% if (current_user && (current_user.guide || current_user.admin)) %>
+<% if (current_user && (current_user.organizer || current_user.admin || current_user.sponsor)) %>
   <% @can_edit = @just_view %>
 
   <%if @just_view %>
-  
+
   <% else %>
     <script>
       $(function() {
@@ -22,11 +22,11 @@
   <title><%= browser_title %></title>
 <% end %>
 
-<% if current_user && (@camp.creator == current_user or current_user.admin or current_user.guide)%>
+<% if current_user && (@camp.creator == current_user or current_user.admin or current_user.organizer or current_user.sponsor)%>
 	<%= render 'form' %>
 
     <div id="footer-bar" dir=<%=t :html_direction %> style=<%= "text-align:" + I18n.t('reverse_direction')%>>
-    <%if current_user.admin or current_user.guide %>
+    <%if current_user.admin or current_user.organizer or current_user.sponsor %>
       <%if @just_view %>
         <%= link_to t(:open_dream_for_guide_edit_view_only), edit_camp_path(id: @camp.id), class: "btn btn-success" %>
       <% else %>

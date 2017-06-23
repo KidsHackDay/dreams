@@ -18,7 +18,7 @@ describe CampsController do
         noise: 'The fire consumes everything',
         nature: 'Well - it will burn....',
         contact_email: 'burn@example.com',
-        contact_name: camp_leader
+        contact_name: camp_leader,
     }
   }
 
@@ -71,7 +71,7 @@ describe CampsController do
       let(:admin) { false }
       let(:sponsor) { false }
       let(:current_user) {
-        User.create!(email: 'mr@robot.me', password: 'badpassword', organizer: organizer, admin: admin)
+        User.create!(email: 'mr@robot.me', password: 'badpassword', organizer: organizer, admin: admin, sponsor: sponsor)
       }
 
       before :each do
