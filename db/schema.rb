@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170623102230) do
+ActiveRecord::Schema.define(version: 20170624161744) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     :index=>{:name=>"index_active_admin_comments_on_namespace"}
@@ -152,6 +152,18 @@ ActiveRecord::Schema.define(version: 20170623102230) do
     t.string   "dream_point_of_contact_email",                             :limit=>64
     t.string   "safety_file_comments",                                     :limit=>4096
     t.date     "event_date"
+    t.time     "starting_time"
+    t.string   "main_organizer"
+    t.string   "main_organizer_email"
+    t.string   "main_organizer_phone"
+    t.string   "main_organizer_facebook"
+    t.string   "venue_name"
+    t.string   "venue_location"
+    t.integer  "event_size"
+    t.integer  "event_duration"
+    t.boolean  "free_building"
+    t.boolean  "moderated_workshops"
+    t.text     "planned_activities"
   end
 
   create_table "grants", force: :cascade do |t|
