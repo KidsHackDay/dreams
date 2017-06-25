@@ -48,17 +48,71 @@
     </div>
   <% end %>
   <div class="combo col-md-7 col-xs-12" id="contact_name" style='float: <%= I18n.t(:lang_direction) %>'>
-    <%= form.label t("form_creator_name_label") %>
+    <%= form.label t("form_organizer_name_label") %>
     <%= form.text_field :contact_name, :maxlength => 64, :class => "form-control" %>
-    <%= t("form_creator_name_guidetext_html") %>
+    <br>
+  </div>
+  <div class="combo col-md-7 col-xs-12" id="contact_name" style='float: <%= I18n.t(:lang_direction) %>'>
+    <%= form.label t("form_organizer_email_label") %>
+    <%= form.text_field :contact_name, :maxlength => 64, :class => "form-control" %>
+    <br>
+  </div>
+  <div class="combo col-md-7 col-xs-12" id="contact_name" style='float: <%= I18n.t(:lang_direction) %>'>
+    <%= form.label t("form_organizer_phone_label") %>
+    <%= form.text_field :contact_name, :maxlength => 64, :class => "form-control" %>
+    <br>
+  </div>
+  <div class="combo col-md-7 col-xs-12" id="contact_name" style='float: <%= I18n.t(:lang_direction) %>'>
+    <%= form.label t("form_organizer_facebook_label") %>
+    <%= form.text_field :contact_name, :maxlength => 64, :class => "form-control" %>
+    <br>
+  </div>
+  <div class="combo col-md-7 col-xs-12" id="contact_name" style='float: <%= I18n.t(:lang_direction) %>'>
+    <%= form.label t("form_venue_name_label") %>
+    <%= form.text_field :contact_name, :maxlength => 64, :class => "form-control" %>
+    <br>
+  </div>
+  <div class="combo col-md-7 col-xs-12" id="contact_name" style='float: <%= I18n.t(:lang_direction) %>'>
+    <%= form.label t("form_venue_location_label") %>
+    <%= form.text_field :contact_name, :maxlength => 64, :class => "form-control" %>
+    <br>
+  </div>
+  <div class="combo col-md-7 col-xs-12" id="contact_name" style='float: <%= I18n.t(:lang_direction) %>'>
+    <%= form.label t("form_event_size_label") %>
+    <%= form.text_field :contact_name, :maxlength => 64, :class => "form-control" %>
+    <%= t("form_event_size_guidetext_html") %>
+    <br>
+  </div>
+  <div class="combo col-md-7 col-xs-12" id="contact_name" style='float: <%= I18n.t(:lang_direction) %>'>
+    <%= form.label t("form_event_duration_label") %>
+    <%= form.text_field :contact_name, :maxlength => 64, :class => "form-control" %>
+    <%= t("form_event_duration_guidetext_html") %>
+    <br>
+  </div>
+  <div class="combo col-md-7 col-xs-12" id="contact_name" style='float: <%= I18n.t(:lang_direction) %>'>
+    <%= form.label t("form_free_building_label") %>
+    <%= form.text_field :contact_name, :maxlength => 64, :class => "form-control" %>
+    <%= t("form_free_building_guidetext_html") %>
+    <br>
+  </div>
+  <div class="combo col-md-7 col-xs-12" id="contact_name" style='float: <%= I18n.t(:lang_direction) %>'>
+    <%= form.label t("form_moderated_workshops_label") %>
+    <%= form.text_field :contact_name, :maxlength => 64, :class => "form-control" %>
+    <%= t("form_moderated_workshops_guidetext_html") %>
+    <br>
+  </div>
+  <div class="combo col-md-7 col-xs-12" id="contact_name" style='float: <%= I18n.t(:lang_direction) %>'>
+    <%= form.label t("form_planned_activities_label") %>
+    <%= form.text_field :contact_name, :maxlength => 64, :class => "form-control" %>
+    <%= t("form_planned_activities_guidetext_html") %>
     <br>
   </div>
   <div>
 
   <div class="submit col-xs-12">
-    <%= form.submit t(:create_dream), class: 'btn btn-success create-new-dream', data:{toggle: 'tooltip'}, title:'Creating your new dream' %>
+    <%= form.submit t(:create_event), class: 'btn btn-success create-new-dream', data:{toggle: 'tooltip'}, title:'Creating your new event' %>
     <span class='loading-new-dream hideme'>
-      <%= t("create_dream_loading_text") %>
+      <%= t("create_event_loading_text") %>
     </span>
   </div>
 <% end %>

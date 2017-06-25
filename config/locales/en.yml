@@ -61,6 +61,7 @@ en:
   form_creator_name_guidetext_html: ''
   create_dream_loading_text: Making room for your dream in our magical cloud...
   create_dream_loading_text2: This usually takes ~8 seconds. Take a mindful breath as we integrate with the drive for you...
+  create_event_loading_text: Making room for your event in our magical cloud...
   form_dream_visability: Public for everyone to see?
   form_dream_visability_yes: Yes, Show it to the world
   form_dream_visability_no: No, Hide it for now
@@ -71,7 +72,6 @@ en:
   form_about_the_artist_label: About the group/Artist
   form_dream_website_label: Web Site / Facebook page
   form_dream_website_short: The dream website
-
   form_dream_point_of_contact_email: Your contact person from Art Department
   dream_safety_file_comments_nop_message: Hurray! Nothing for you to update right now...
   dream_safety_file_comments_update: Update Comments
@@ -81,6 +81,22 @@ en:
   form_project_management_crew_desc: Relevant (/your personal) background information
     will be saved for the art fund's evaluation of the performance's potential. If
     unused/unmanned please leave the field empty.
+  form_organizer_name_label: Main Organizer Name
+  form_organizer_email_label: Main Organizer Email
+  form_organizer_phone_label: Main Organizer Phone
+  form_organizer_facebook_label: Main Organizer Facebook
+  form_venue_name_label: Venue Name
+  form_venue_location_label: Venue Location
+  form_event_size_label: Event Size
+  form_event_size_guidetext_html: How many people will be attending?
+  form_event_duration_label: Event Duration
+  form_event_duration_guidetext_html: How many days will the event last?
+  form_free_building_label: Free Hacking?
+  form_free_building_guidetext_html: Will there be unmoderated hacking happening?
+  form_moderated_workshops_label: Moderated Workshops
+  form_moderated_workshops_guidetext_html: Will there be moderated workshops?
+  form_planned_activities_label: Planned Activities
+  form_planned_activities_guidetext_html: What activities do you have planned? Please go into detail.
   choose_person: Choose a person
   add_a_new_person: Add a new person
   edit_person: Edit details
@@ -365,11 +381,16 @@ en:
   form_safetybag_remember_sketch: This is also the place to upload any sketch you may have
   form_budgetplan_label: Budget overview
   create_dream: Create Dream!
+  create_event: Create Event!
   update_dream: Update Dream!
+  update_event: Update Event!
   edit_dream: Edit Dream
+  edit_event: Edit Event
   manage_images: Manage Images
   open_dream_for_guide_edit: Open dream for guide editing
+  open_event_for_organizer_edit: Open event for organizer editing
   open_dream_for_guide_edit_view_only: Lock dream for View only
+  open_event_for_organizer_edit_view_only: Lock event for View only
   give_grants: Give Grants
   i_gift_thee_grants: Donate to dream
   no_granting_yet: No granting for this dream yet!
